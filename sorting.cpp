@@ -125,8 +125,13 @@ void printArray(int array[], int size){
 }
 
 int main(){
-	int array[] = {10, 7, 8, 9, 1, 5, 2, 3, 12, 15, 2};
-	int n = sizeof(array)/sizeof(array[0]);
+	int n=400;
+	int array[n];
+	srand(time(NULL));
+	for(int i=0; i<n; i++){
+		int random = rand()%400;
+		array[i]=random;
+	}
 
 	clock_t start;
 	double duration;
